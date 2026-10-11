@@ -76,16 +76,18 @@ export const PeopleFilters = () => {
           </div>
 
           <div className="level-right ml-4">
-            <a
+            <Link
               data-cy="centuryALL"
               className={classNames('button', {
                 'is-success': !centurie,
                 'is-outlined': centurie,
               })}
-              href="#/people"
+              to={`/people?${getSearchWith(searchParams, {
+                centuries: null,
+              })}`}
             >
               All
-            </a>
+            </Link>
           </div>
         </div>
       </div>
